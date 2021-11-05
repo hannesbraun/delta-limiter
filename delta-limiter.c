@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#define DL_URI "https://github.com/hannesbraun/delta-limiter"
+#define DL_URI "https://hannesbraun.net/ns/lv2/delta-limiter"
 
 typedef enum {
 	INPUT_L = 0,

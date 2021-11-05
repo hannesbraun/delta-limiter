@@ -4,24 +4,21 @@
 @prefix units:	<http://lv2plug.in/ns/extensions/units#> .
 @prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
-<https://github.com/hannesbraun>
-	a foaf:Person ;
-	foaf:name "Hannes Braun" ;
-	foaf:mbox <mailto:hannesbraun@mail.de> ;
-	foaf:homepage <http://hannesbraun.github.io/> .
-
-<https://github.com/hannesbraun/lv2plugins>
-	a doap:Project ;
-	doap:maintainer <https://github.com/hannesbraun> ;
-	doap:name "Hannes Braun's Collection of LV2 Plugins" .
-
-<https://github.com/hannesbraun/delta-limiter>
+<https://hannesbraun.net/ns/lv2/delta-limiter>
 	a lv2:Plugin ,
 		lv2:DistortionPlugin ,
 		lv2:LowpassPlugin ;
-	lv2:project <https://github.com/hannesbraun/lv2plugins> ;
 	doap:name "Delta Limiter" ;
-	doap:license <https://opensource.org/licenses/none> ;
+	rdfs:comment "A weird distortion and lowpass plugin" ;
+	doap:license <https://opensource.org/licenses/BSL-1.0> ;
+	doap:maintainer [
+		foaf:name "Hannes Braun" ;
+		foaf:homepage "https://hannesbraun.net/"
+	] ;
+
+	lv2:minorVersion 2;
+	lv2:microVersion 0;
+
 	lv2:optionalFeature lv2:hardRTCapable ;
 	lv2:port [
 		a lv2:AudioPort ,

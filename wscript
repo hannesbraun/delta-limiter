@@ -2,10 +2,6 @@
 from waflib.extras import autowaf as autowaf
 import re
 
-# Variables for 'waf dist'
-APPNAME = 'delta-limiter.lv2'
-VERSION = '1.0.0'
-
 # Mandatory variables
 top = '.'
 out = 'build'
