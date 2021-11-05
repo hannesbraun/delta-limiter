@@ -1,9 +1,8 @@
 @prefix doap:	<http://usefulinc.com/ns/doap#> .
 @prefix lv2:	<http://lv2plug.in/ns/lv2core#> .
-@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix units:	<http://lv2plug.in/ns/extensions/units#> .
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
 
 <https://github.com/hannesbraun>
 	a foaf:Person ;
@@ -62,28 +61,28 @@
 		a lv2:ControlPort ,
 			lv2:InputPort ;
 		lv2:index 5 ;
-		lv2:symbol "shape" ;
-		lv2:name "Shape" ;
-		lv2:default 0.0 ;
-		lv2:minimum -1.0 ;
+		lv2:symbol "limit" ;
+		lv2:name "Delta Limit" ;
+		lv2:default 1.0 ;
+		lv2:minimum 0.0 ;
 		lv2:maximum 1.0
 	] , [
 		a lv2:ControlPort ,
 			lv2:InputPort ;
 		lv2:index 6 ;
-		lv2:symbol "limit" ;
-		lv2:name "Delta Limit" ;
-		lv2:default 0.05 ;
-		lv2:minimum 0.0 ;
-		lv2:maximum 0.1
-	] , [
-		a lv2:ControlPort ,
-			lv2:InputPort ;
-		lv2:index 7 ;
 		lv2:symbol "outGain" ;
 		lv2:name "Output Gain" ;
 		lv2:default 1.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 4.0 ;
 		units:unit units:coef
+	] , [
+		a lv2:ControlPort ,
+			lv2:InputPort ;
+		lv2:index 7 ;
+		lv2:symbol "dryWet" ;
+		lv2:name "Dry/Wet" ;
+		lv2:default 1.0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0
 	] .
