@@ -9,8 +9,8 @@
 ## Documentation
 
 ```bash
-pandoc -s user_guide.md user_guide.html
-pandoc -s user_guide.md user_guide.pdf
+pandoc -s user_manual.md user_manual.html
+pandoc -s user_manual.md user_manual.pdf
 ```
 
 ## License
