@@ -7,12 +7,10 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
-if(WIN32)
-  # TODO
-elseif(APPLE)
+if(APPLE)
   set(CMAKE_INSTALL_PREFIX $ENV{HOME}/Library/Audio/Plug-Ins/LV2)
 elseif(UNIX)
-  # TODO
+  set(CMAKE_INSTALL_PREFIX /usr/local/lib/lv2)
 endif()
 
 include(FindPkgConfig)
@@ -37,10 +35,6 @@ endif()
 configure_file(manifest.ttl.in ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/manifest.ttl)
 configure_file(delta-limiter.ttl ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/delta-limiter.ttl)
 
-if(WIN32)
-  # TODO
-elseif(APPLE)
-    install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY} DESTINATION ${CMAKE_INSTALL_PREFIX})
-elseif(UNIX)
-    # TODO
+if(APPLE OR UNIX)
+  install(DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY} DESTINATION ${CMAKE_INSTALL_PREFIX})
 endif()
