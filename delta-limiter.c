@@ -147,7 +147,7 @@ static void run(LV2_Handle instance, uint32_t n_samples) {
 	dl->last_out_r = last_out_r;
 }
 
-static void deactivate(LV_Handle) {}
+static void deactivate(LV2_Handle instance) {}
 
 static void cleanup(LV2_Handle instance) {
 	free(instance);
