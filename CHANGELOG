@@ -1,0 +1,10 @@
+2.2
+---
+- Bugfix for validation error in delta-limiter.ttl
+- New build system: CMake
+- Release build are now ensured
+- Bugfix for deactivate function (the plugin still worked properly before)
+
+2.0
+---
+*Initial version*

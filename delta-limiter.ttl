@@ -7,17 +7,18 @@
 <https://hannesbraun.net/ns/lv2/delta-limiter>
 	a lv2:Plugin ,
 		lv2:DistortionPlugin ,
-		lv2:LowpassPlugin ;
+		lv2:LowpassPlugin ,
+		doap:Project ;
 	doap:name "Delta Limiter" ;
 	rdfs:comment "A weird distortion and lowpass plugin" ;
 	doap:license <https://opensource.org/licenses/BSL-1.0> ;
 	doap:maintainer [
 		foaf:name "Hannes Braun" ;
-		foaf:homepage "https://hannesbraun.net/"
+		foaf:homepage <https://hannesbraun.net/>
 	] ;
 
 	lv2:minorVersion 2 ;
-	lv2:microVersion 0 ;
+	lv2:microVersion 2 ;
 
 	lv2:optionalFeature lv2:hardRTCapable ;
 	lv2:port [

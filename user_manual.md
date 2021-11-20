@@ -2,7 +2,7 @@
 
 *Author: Hannes Braun*
 
-*Version: 2.0*
+*Version: 2.2*
 
 ## About
 
