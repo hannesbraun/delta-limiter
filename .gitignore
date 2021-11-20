@@ -1,3 +1,4 @@
 build
 .lock-waf_darwin_build
 user_manual.pdf
+user_manual.html
