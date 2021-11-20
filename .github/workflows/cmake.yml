@@ -23,3 +23,6 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       run: make
+    - name: Validate LV2 plugin
+      working-directory: ${{github.workspace}}/build/delta-limiter.lv2
+      run: lv2_validate manifest.ttl delta-limiter.ttl
