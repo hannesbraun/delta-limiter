@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Download dependencies
-      run: brew install lv2
+      run: brew install lv2 sord
       shell: bash
     - uses: actions/checkout@v2
     - name: Configure CMake
