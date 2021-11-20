@@ -17,6 +17,10 @@ endif()
 
 include(FindPkgConfig)
 pkg_check_modules(LV2 lv2 REQUIRED)
+if(MSYS OR MINGW)
+  # Ugly but it should work in most cases
+  string(REGEX REPLACE "C:" "/c/" LV2_INCLUDE_DIRS ${LV2_INCLUDE_DIRS})
+endif()
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.lv2)
 
