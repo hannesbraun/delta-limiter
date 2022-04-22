@@ -24,6 +24,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.lv2)
 
 add_library(${PROJECT_NAME} SHARED delta-limiter.c)
 target_include_directories(${PROJECT_NAME} PRIVATE ${LV2_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} m)
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 
 if(MSVC)
